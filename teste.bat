@@ -1,0 +1,1 @@
+wget http://localhost:8088/open?-patientid=12345&-accessionnumber=234234&-crm=123&-uf=SC&-password=bar123&-enableall

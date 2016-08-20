@@ -1,0 +1,1 @@
+viewer.exe -patientid=12345 -accessionnumber=234234 -crm=123 -uf=SC -password=bar123 -enableall

@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 241
-  Top = 187
+  Left = 415
+  Top = 298
   Width = 706
   Height = 385
   Caption = 'Remote Launcher PACS Viewer'
@@ -90,8 +90,145 @@ object MainForm: TMainForm
       end
     end
     object TabTest: TTabSheet
-      Caption = 'Test'
+      Caption = 'Teste'
       ImageIndex = 1
+      object Label3: TLabel
+        Left = 96
+        Top = 36
+        Width = 43
+        Height = 13
+        Caption = '-patientid'
+      end
+      object Label4: TLabel
+        Left = 52
+        Top = 64
+        Width = 86
+        Height = 13
+        Caption = '-accessionnumber'
+      end
+      object Label5: TLabel
+        Left = 116
+        Top = 92
+        Width = 20
+        Height = 13
+        Caption = '-crm'
+      end
+      object Label6: TLabel
+        Left = 124
+        Top = 120
+        Width = 12
+        Height = 13
+        Caption = '-uf'
+      end
+      object Label7: TLabel
+        Left = 92
+        Top = 148
+        Width = 48
+        Height = 13
+        Caption = '-password'
+      end
+      object edPac: TEdit
+        Left = 148
+        Top = 32
+        Width = 121
+        Height = 21
+        TabOrder = 0
+        Text = '670754'
+      end
+      object edAcNum: TEdit
+        Left = 148
+        Top = 60
+        Width = 121
+        Height = 21
+        TabOrder = 1
+        Text = '6547315'
+      end
+      object edCrm: TEdit
+        Left = 148
+        Top = 88
+        Width = 121
+        Height = 21
+        TabOrder = 2
+        Text = '1808'
+      end
+      object edUf: TEdit
+        Left = 148
+        Top = 116
+        Width = 121
+        Height = 21
+        TabOrder = 3
+        Text = 'SC'
+      end
+      object edPass: TEdit
+        Left = 148
+        Top = 144
+        Width = 121
+        Height = 21
+        TabOrder = 4
+        Text = 'bar123'
+      end
+      object BitBtn2: TBitBtn
+        Left = 148
+        Top = 188
+        Width = 137
+        Height = 25
+        Caption = 'Executar Viewer'
+        TabOrder = 5
+        OnClick = BitBtn2Click
+        Kind = bkRetry
+      end
+    end
+    object TabConfig: TTabSheet
+      Caption = 'Config'
+      ImageIndex = 2
+      object Label1: TLabel
+        Left = 69
+        Top = 32
+        Width = 28
+        Height = 13
+        Caption = 'Porta:'
+      end
+      object Label2: TLabel
+        Left = 32
+        Top = 60
+        Width = 66
+        Height = 13
+        Caption = 'PACS Viewer:'
+      end
+      object edPort: TEdit
+        Left = 104
+        Top = 28
+        Width = 57
+        Height = 21
+        TabOrder = 0
+        Text = '8088'
+      end
+      object edViewer: TEdit
+        Left = 104
+        Top = 56
+        Width = 293
+        Height = 21
+        TabOrder = 1
+        Text = '.\viewer_teste\viewer.exe'
+      end
+      object BitBtn1: TBitBtn
+        Left = 104
+        Top = 121
+        Width = 75
+        Height = 25
+        Caption = 'Salvar'
+        TabOrder = 2
+        OnClick = BitBtn1Click
+        Kind = bkOK
+      end
+      object ckInitWin: TCheckBox
+        Left = 104
+        Top = 88
+        Width = 201
+        Height = 17
+        Caption = 'Iniciar automaticamente no Logon'
+        TabOrder = 3
+      end
     end
   end
   object TrayIcon: TCoolTrayIcon
@@ -146,6 +283,7 @@ object MainForm: TMainForm
     end
     object Sair1: TMenuItem
       Caption = 'Sair'
+      OnClick = BtnCloseClick
     end
   end
   object HTTPServer: TIdHTTPServer

@@ -1,6 +1,6 @@
 object fPrincipal: TfPrincipal
   Left = 233
-  Top = 197
+  Top = 198
   Width = 515
   Height = 316
   Caption = 'Teste Viewer PACS'

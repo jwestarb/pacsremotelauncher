@@ -42,6 +42,7 @@ implementation
 procedure TfPrincipal.FormShow(Sender: TObject);
 var
   I: Integer;
+  Input: TInput;
 begin
   Label13.Caption := InttoStr(ParamCount);
   if (ParamCount >= 5) then
@@ -66,6 +67,18 @@ begin
     begin
       ListBox1.AddItem(ParamStr(I),Sender);
     end;
+
+  SetWindowPos(Handle,
+               HWND_NOTOPMOST,
+               Left,
+               Top,
+               Width,
+               Height,
+               SWP_NOACTIVATE or SWP_NOMOVE or SWP_NOSIZE);
+  ZeroMemory(@Input, SizeOf(Input));
+  SendInput(1, Input, SizeOf(Input));
+  SetForegroundWindow(Handle);
+
 end;
 
 end.

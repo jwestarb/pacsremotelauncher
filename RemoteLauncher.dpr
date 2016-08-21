@@ -8,6 +8,8 @@ uses
 
 begin
   Application.Initialize;
+  Application.Title := 'Remote Launcher PACS Viewer';
+  Application.ShowMainForm := False;
   Application.CreateForm(TMainForm, MainForm);
   Application.Run;
 end.
